@@ -1,34 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>账号密码查询</title>
-  <script type="text/javascript">
-    function getPassword() {
-      var account = document.getElementById("accountInput").value;
-      
-      // 在这里你可以编写逻辑代码，根据账号查询对应的密码
-      // 例如，你可以通过一个对象或数组来存储账号与密码的对应关系
-      
-      // 假设有一个对象accounts存储账号密码，格式为 { 账号: 密码 }
-      var accounts = {
-        "c429369903@outlook.com": "mussster4",
-        "user2": "password2",
-        // 可以继续添加更多账号和密码
-      };
-      
-      if (account in accounts) {
-        var password = accounts[account];
-        document.getElementById("result").innerHTML = "账号：" + account + " 的密码是：" + password;
-      } else {
-        document.getElementById("result").innerHTML = "错误：账号不存在";
-      }
+  <title>个人主页</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
     }
-  </script>
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+    
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+    }
+    
+    .profile-img {
+      display: block;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section h2 {
+      margin-top: 0;
+    }
+  </style>
 </head>
 <body>
-  <h1>账号密码查询</h1>
-  <input type="text" id="accountInput" placeholder="请输入账号">
-  <button onclick="getPassword()">查询</button>
-  <p id="result"></p>
+  <header>
+    <h1>个人主页</h1>
+    <p>欢迎访问我的个人主页！</p>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>个人资料</h2>
+      <img class="profile-img" src="profile.jpg" alt="Profile Picture">
+      <p>姓名：tewhdn</p>
+      <p>年龄：15岁</p>
+      <p>职业：学生</p>
+    </section>
+
+    <section class="section">
+      <h2>教育背景</h2>
+      <ul>
+        <li>大学：中央大学</li>
+        <li>专业：it</li>
+        <li>学位：博士</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>工作经历</h2>
+      <ul>
+        <li>霸王集团：总裁</li>
+        <li>文浩集团：董事长（2017-2018）</li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
